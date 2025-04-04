@@ -837,7 +837,7 @@ async def change_stream(chat_id):
         [
             [
                 InlineKeyboardButton(
-                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋",
                     callback_data="force_close",
                 )
             ],
@@ -931,7 +931,7 @@ async def stream_audio_or_video(client, message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
+                            text="💕 𝐂𖾘𖽙𖾗𖾝  🦋",
                             callback_data="force_close",
                         )
                     ],
@@ -1005,7 +1005,7 @@ async def stream_audio_or_video(client, message):
         [
             [
                 InlineKeyboardButton(
-                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋",
                     callback_data="force_close",
                 )
             ],
@@ -1344,7 +1344,7 @@ With Your ☛ Other Friends.**"""
             ],
             [
                 InlineKeyboardButton(
-                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋",
                     callback_data="force_close",
                 )
             ],
@@ -1422,7 +1422,7 @@ async def check_bot_stats(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋",
                     callback_data="force_close",
                 )
             ]
