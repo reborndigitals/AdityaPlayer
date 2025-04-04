@@ -78,14 +78,14 @@ LOGGER = logging.getLogger("SYSTEM")
 if os.path.exists("Config.env"):
     load_dotenv("Config.env")
 
-API_ID = int(getenv("API_ID", 0))
-API_HASH = getenv("API_HASH", None)
+API_ID = int(getenv("API_ID", "10284859"))
+API_HASH = getenv("API_HASH", "b0ad58eb8b845ba0003e0d9ce5fc2196")
 BOT_TOKEN = getenv("BOT_TOKEN", None)
 STRING_SESSION = getenv("STRING_SESSION", None)
-MONGO_DB_URL = getenv("MONGO_DB_URL", None)
-OWNER_ID = int(getenv("OWNER_ID", 0))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", 0))
-START_IMAGE_URL = getenv("START_IMAGE_URL", None)
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://heartbeat:Beat7Heart@heartbeat.1h1nbxv.mongodb.net/?retryWrites=true&w=majority")
+OWNER_ID = int(getenv("OWNER_ID","1281282633"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1001735663878"))
+START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/f21bcb4b8b9c421409b64.png")
 
 
 # Memory Database
@@ -221,7 +221,7 @@ async def main():
     LOGGER.info("✅ PyTgCalls Started.")
     await asyncio.sleep(1)
     LOGGER.info("✅ Sucessfully Hosted Your Bot !!")
-    LOGGER.info("✅ Now Do Visit: @AdityaServer !!")
+    LOGGER.info("✅ Now Do Visit: @HeartBeat_Muzic !!")
     await idle()
 
 
@@ -362,29 +362,18 @@ async def start_message_private(client, message):
             pass
             
     else:
-        caption = f"""**➻ Hello, {mention}
-
-🥀 I am An ≽ Advanced ≽ High Quality
-Bot, I Can Stream 🌿 Audio & Video In
-Your ♚ Channel And Group.
-
-🐬 Must Click ❥ Open Command List
-Button ⋟ To Get More Info's 🦋 About
-My All Commands.
-
-💐 Feel Free ≽ To Use Me › And Share
-With Your ☛ Other Friends.**"""
+        caption = f"""**𝑇ℎ𝑖𝑠 𝐼𝑠 𝐴𝑑𝑣𝑎𝑛𝑐𝑒 𝑀𝑢𝑠𝑖𝑐 𝑃𝑙𝑎𝑦𝑒𝑟 𝐵𝑜𝑡 𝐹𝑜𝑟 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑟𝑜𝑢𝑝 + 𝐶ℎ𝑎𝑛𝑛𝑒𝑙𝑠 𝑉𝑐**</b>\n\n<b> **💕 𝑃𝑙𝑎𝑦 + 𝑉𝑝𝑙𝑎𝑦 + 𝐶𝑝𝑙𝑎𝑦 + 𝐶𝑣𝑝𝑙𝑎𝑦💕**</b>\n\n<b>**𝑆𝑢𝑝𝑝𝑜𝑟𝑡𝑒𝑑 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 ☆ 𝐿𝑒𝑓𝑡 𝑁𝑜𝑡𝑖𝑐𝑒, 𝑇𝑎𝑔𝑎𝑙𝑙 , 𝑉𝑐𝑡𝑎𝑔 , 𝐵𝑎𝑛 - 𝑀𝑢𝑡𝑒, 𝑃𝑖𝑐𝑘 𝑈𝑝 𝐿𝑖𝑛𝑒, 𝑆𝑜𝑛𝑔 - 𝑉𝑖𝑑𝑒𝑜 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑, 𝐸𝑐𝑡..... **</b>\n\n<b>**𝑈𝑠𝑒 🫧  /help 𝑇𝑜 𝐶ℎ𝑒𝑐𝑘 𝐹𝑒𝑎𝑡𝑢𝑟𝑒**</b>\n\n<b>**💕 𝐍𖽞𖾓𖾟𖽙𖾖ᴋ 🦋 [𝞖𝘌𝘈𝘙𝘛𝂬♡𝂬𝞑𝘌𝘈𝘛▹ᴴᴮ⸳⸳ⷮ⸳⸳ⷨ](https://t.me/HeartBeat_Muzic) 💞**</b>\n\n<b>💕 𝐎𖾟𖽡𖽞𖾖 🦋  **[𑫏ⳢⅬᤌໍᤌ᭄ᰈⅬᤌໍᤌ𑂞ⳣവᰈᮀ།ໍᴮᴬᵀ🦇](https://t.me/rajeshrakis)** 💞"""
         buttons = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="🥀 Add Me In Your Chat ✨",
+                        text="💕 𝐂𖾘𖽹𖽝ᴋ 𝐇𖽞𖽖𖽞 𝐓𖽙 𝐀𖽴𖽴 𝐌𖽞 🦋",
                         url=f"https://t.me/{bot.me.username}?startgroup=true",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        text="🌺 Open Command List 🌷",
+                        text="💕 𝐅𖽞𖽖𖾓𖽪𖽷𖽞𖾗 🦋",
                         callback_data="open_command_list",
                     )
                 ],
@@ -446,29 +435,18 @@ Only in Channels/Groups."""
 @bot.on_callback_query(rgx("back_to_home"))
 async def back_to_home_menu(client, query):
     mention = query.from_user.mention
-    caption = f"""**➻ Hello, {mention}
-
-🥀 I am An ≽ Advanced ≽ High Quality
-Bot, I Can Stream 🌿 Audio & Video In
-Your ♚ Channel And Group.
-
-🐬 Must Click ❥ Open Command List
-Button ⋟ To Get More Info's 🦋 About
-My All Commands.
-
-💐 Feel Free ≽ To Use Me › And Share
-With Your ☛ Other Friends.**"""
+    caption = f"""**𝑇ℎ𝑖𝑠 𝐼𝑠 𝐴𝑑𝑣𝑎𝑛𝑐𝑒 𝑀𝑢𝑠𝑖𝑐 𝑃𝑙𝑎𝑦𝑒𝑟 𝐵𝑜𝑡 𝐹𝑜𝑟 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝐺𝑟𝑜𝑢𝑝 + 𝐶ℎ𝑎𝑛𝑛𝑒𝑙𝑠 𝑉𝑐**</b>\n\n<b> **💕 𝑃𝑙𝑎𝑦 + 𝑉𝑝𝑙𝑎𝑦 + 𝐶𝑝𝑙𝑎𝑦 + 𝐶𝑣𝑝𝑙𝑎𝑦💕**</b>\n\n<b>**𝑆𝑢𝑝𝑝𝑜𝑟𝑡𝑒𝑑 𝑊𝑒𝑙𝑐𝑜𝑚𝑒 ☆ 𝐿𝑒𝑓𝑡 𝑁𝑜𝑡𝑖𝑐𝑒, 𝑇𝑎𝑔𝑎𝑙𝑙 , 𝑉𝑐𝑡𝑎𝑔 , 𝐵𝑎𝑛 - 𝑀𝑢𝑡𝑒, 𝑃𝑖𝑐𝑘 𝑈𝑝 𝐿𝑖𝑛𝑒, 𝑆𝑜𝑛𝑔 - 𝑉𝑖𝑑𝑒𝑜 𝐷𝑜𝑤𝑛𝑙𝑜𝑎𝑑, 𝐸𝑐𝑡..... **</b>\n\n<b>**𝑈𝑠𝑒 🫧  /help 𝑇𝑜 𝐶ℎ𝑒𝑐𝑘 𝐹𝑒𝑎𝑡𝑢𝑟𝑒**</b>\n\n<b>**💕 𝐍𖽞𖾓𖾟𖽙𖾖ᴋ 🦋 [𝞖𝘌𝘈𝘙𝘛𝂬♡𝂬𝞑𝘌𝘈𝘛▹ᴴᴮ⸳⸳ⷮ⸳⸳ⷨ](https://t.me/HeartBeat_Muzic) 💞**</b>\n\n<b>💕 𝐎𖾟𖽡𖽞𖾖 🦋  **[𑫏ⳢⅬᤌໍᤌ᭄ᰈⅬᤌໍᤌ𑂞ⳣവᰈᮀ།ໍᴮᴬᵀ🦇](https://t.me/rajeshrakis)** 💞"""
     buttons = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="🥀 Add Me In Your Chat ✨",
+                    text="💕 𝐂𖾘𖽹𖽝ᴋ 𝐇𖽞𖽖𖽞 𝐓𖽙 𝐀𖽴𖽴 𝐌𖽞 🦋",
                     url=f"https://t.me/{bot.me.username}?startgroup=true",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="🌺 Open Command List 🌷",
+                    text="💕 𝐅𖽞𖽖𖾓𖽪𖽷𖽞𖾗 🦋",
                     callback_data="open_command_list",
                 )
             ],
@@ -779,23 +757,23 @@ async def stream_logger(
             except Exception:
                 requested_by = user.title
             if position:
-                caption = f"""**✅ Added To Queue At :** `#{position}`
+                caption = f"""**💕  𝐀𖽴𖽴 𝐓𖽙 𝐐𖽪𖽞𖽪𖽞 🦋** `#{position}`
 
-**🥀 Title:** {title}
-**🐬 Duration:** {duration}
+**💕 𝐓𖽹𖽷𖾘𖽞  🦋** {title}
+**💕 𝐃𖽪𖽷𖽖𖾓𖽹𖽙𖽡 🦋** {duration}
 **🦋 Stream Type:** {stream_type}
-**🌺 Chat Name:** {chat_name}
-**🌼 Chat Link:** {chat_link}
-**👾 Requested By:** {requested_by}"""
+**💕 𝐏𖽙𖽮𖽞𖾖𖽴 𝐁ʏ 🦋** {chat_name}
+**💕 𝐍𖽞𖾓𖾟𖽙𖾖ᴋ 🦋** {chat_link}
+**💕 𝐏𖾘𖽖ʏ 𝀚 𝐁ʏ 🦋** {requested_by}"""
             else:
                 caption = f"""**✅ Started Streaming On VC.**
 
-**🥀 Title:** {title}
-**🐬 Duration:** {duration}
+**💕 𝐓𖽹𖽷𖾘𖽞  🦋** {title}
+**💕 𝐃𖽪𖽷𖽖𖾓𖽹𖽙𖽡 🦋** {duration}
 **🦋 Stream Type:** {stream_type}
-**🌺 Chat Name:** {chat_name}
-**🌼 Chat Link:** {chat_link}
-**👾 Requested By:** {requested_by}"""
+**💕 𝐏𖽙𖽮𖽞𖾖𖽴 𝐁ʏ 🦋** {chat_name}
+**💕 𝐍𖽞𖾓𖾟𖽙𖾖ᴋ 🦋** {chat_link}
+**💕 𝐏𖾘𖽖ʏ 𝀚 𝐁ʏ 🦋** {requested_by}"""
             try:
                 await bot.send_photo(LOG_GROUP_ID, photo=thumbnail, caption=caption)
             except Exception:
@@ -851,15 +829,15 @@ async def change_stream(chat_id):
     await add_active_media_chat(chat_id, stream_type)
     caption = f"""**✅ Started Streaming On VC.**
 
-**🥀 Title:** {title}
-**🐬 Duration:** {duration}
+**💕 𝐓𖽹𖽷𖾘𖽞  🦋** {title}
+**💕 𝐃𖽪𖽷𖽖𖾓𖽹𖽙𖽡 🦋** {duration}
 **🦋 Stream Type:** {stream_type}
-**👾 Requested By:** {requested_by}"""
+**💕 𝐏𖾘𖽖ʏ 𝀚 𝐁ʏ 🦋** {requested_by}"""
     buttons = InlineKeyboardMarkup(
         [
             [
                 InlineKeyboardButton(
-                    text="🗑️ Close",
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
                     callback_data="force_close",
                 )
             ],
@@ -953,14 +931,14 @@ async def stream_audio_or_video(client, message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🗑️ Close",
+                            text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
                             callback_data="force_close",
                         )
                     ],
                 ]
             )
             return await aux.edit_text(
-                "**🥀 Give Me Some Query To\nPlay Audio Or Video❗...\n\nℹ️ Examples:\n≽ Audio: `/play satisfya`\n≽ Video: `/vplay satisfya`**",
+                "**🥀 Give Me Some Query To\nPlay Audio Or Video❗...\n\nℹ️ Examples:\n≽ Audio: `/play Yuvan Mix`\n≽ Video: `/vplay Yuvan Mix`**",
                 reply_markup=buttons,
             )
         query = message.text.split(None, 1)[1]
@@ -1027,7 +1005,7 @@ async def stream_audio_or_video(client, message):
         [
             [
                 InlineKeyboardButton(
-                    text="🗑️ Close",
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
                     callback_data="force_close",
                 )
             ],
@@ -1055,12 +1033,12 @@ async def stream_audio_or_video(client, message):
                 position = await add_to_queue(
                     chat_id, user, title, duration, stream_file, stream_type, thumbnail
                 )
-                caption = f"""**✅ Added To Queue At :** `#{position}`
+                caption = f"""**💕  𝐀𖽴𖽴 𝐓𖽙 𝐐𖽪𖽞𖽪𖽞 🦋** `#{position}`
 
-**🥀 Title:** {title}
-**🐬 Duration:** {duration}
+**💕 𝐓𖽹𖽷𖾘𖽞  🦋** {title}
+**💕 𝐃𖽪𖽷𖽖𖾓𖽹𖽙𖽡 🦋** {duration}
 **🦋 Stream Type:** {stream_type}
-**👾 Requested By:** {requested_by}"""
+**💕 𝐏𖾘𖽖ʏ 𝀚 𝐁ʏ 🦋** {requested_by}"""
                 await bot.send_photo(chat_id, thumbnail, caption, reply_markup=buttons)
                 await stream_logger(
                     chat_id, user, title, duration, stream_type, thumbnail, position
@@ -1164,10 +1142,10 @@ async def stream_audio_or_video(client, message):
                 )
                 caption = f"""**✅ Started Streaming On VC.**
 
-**🥀 Title:** {title}
-**🐬 Duration:** {duration}
+**💕 𝐓𖽹𖽷𖾘𖽞  🦋** {title}
+**💕 𝐃𖽪𖽷𖽖𖾓𖽹𖽙𖽡 🦋** {duration}
 **🦋 Stream Type:** {stream_type}
-**👾 Requested By:** {requested_by}"""
+**💕 𝐏𖾘𖽖ʏ 𝀚 𝐁ʏ 🦋** {requested_by}"""
                 await bot.send_photo(chat_id, thumbnail, caption, reply_markup=buttons)
                 await stream_logger(
                     chat_id, user, title, duration, stream_type, thumbnail
@@ -1361,12 +1339,12 @@ With Your ☛ Other Friends.**"""
             [
                 InlineKeyboardButton(
                     text="🌺 Open Repository Link 🦋",
-                    url="https://github.com/AdityaHalder/AdityaPlayer",
+                    url="https://t.me/HeartBeat_Muzic",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    text="🗑️ Close",
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
                     callback_data="force_close",
                 )
             ],
@@ -1433,7 +1411,7 @@ async def check_bot_stats(client, message):
     except:
         pass
     photo = START_IMAGE_URL
-    caption = "**⏤͟͞ADITYA PLAYER STATS ༗**"
+    caption = "**⏤͟͞PLAYER STATS ༗**"
     buttons = InlineKeyboardMarkup(
         [
             [
@@ -1444,7 +1422,7 @@ async def check_bot_stats(client, message):
             ],
             [
                 InlineKeyboardButton(
-                    text="🗑️ Close",
+                    text="💕 𝐂𖾘𖽙𖾗𖾝  🦋,
                     callback_data="force_close",
                 )
             ]
