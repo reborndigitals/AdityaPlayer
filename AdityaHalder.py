@@ -85,6 +85,7 @@ STRING_SESSION = getenv("STRING_SESSION", None)
 MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://heartbeat:Beat7Heart@heartbeat.1h1nbxv.mongodb.net/?retryWrites=true&w=majority")
 OWNER_ID = int(getenv("OWNER_ID","1281282633"))
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001735663878"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1001735663878"))
 START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/f21bcb4b8b9c421409b64.png")
 
 
